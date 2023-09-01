@@ -40,7 +40,15 @@ module.exports = {
         rules: [{ // this is so that we can compile any React,        // ES6 and above into normal ES5 syntax        
             test: /\.(js|jsx)$/, // we do not want anything from node_modules to be compiled        
             exclude: /node_modules/,
-            use: ['babel-loader']
+            // use: ['babel-loader']
+                  use: [
+            {
+              loader: 'babel-loader',
+              options: {
+                cacheDirectory: true,
+              },
+            },
+          ],
         }, {
             test: /\.(css|scss)$/,
             use: ["style-loader",        
