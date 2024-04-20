@@ -21,8 +21,9 @@ I'm Sam, and I'm passionate about product engineering and web development. I cre
 
 ### About the app
 Webpack will automatically take the src/index.js file, compile it, and output it inside dist/main.js and will minify that code.
->npm install -g babel-cli  // To run babel-node
 
+### Packages used
+>npm install -g babel-cli  // To run babel-node
 
 ## Subscribe and Stay Updated!
 
