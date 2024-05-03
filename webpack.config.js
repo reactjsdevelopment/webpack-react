@@ -1,27 +1,6 @@
-// const path = require('path');
-// const HtmlWebpackPlugin = require('html-webpack-plugin');
-// module.exports = {
-//     entry: path.join(__dirname, 'src', 'index.js'),
-//     output: {
-//         path: path.join(__dirname, 'build'),
-//         filename: 'index.bundle.js'
-//     },
-//     mode: process.env.NODE_ENV || 'development',
-//     resolve: {
-//         modules: [path.resolve(__dirname, 'src'), 'node_modules']
-//     },
-//     devServer: {
-//         // contentBase: path.join(__dirname, 'src')
-//         static: './'
-//     },
-//     plugins: [new HtmlWebpackPlugin({
-//         template: path.join(__dirname, 'src', 'index.html')
-//     })]
-// };
-
-
 import path from 'path';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
+
 module.exports = {
     entry: path.join(__dirname, 'src', 'index.js'),
     output: {
@@ -41,26 +20,26 @@ module.exports = {
             test: /\.(js|jsx)$/, // we do not want anything from node_modules to be compiled        
             exclude: /node_modules/,
             // use: ['babel-loader']
-                  use: [
-            {
-              loader: 'babel-loader',
-              options: {
-                cacheDirectory: true,
-              },
-            },
-          ],
+            use: [
+                {
+                    loader: 'babel-loader',
+                    options: {
+                        cacheDirectory: true,
+                    },
+                },
+            ],
         }, {
             test: /\.(css|scss)$/,
-            use: ["style-loader",        
-                "css-loader",        
-                "sass-loader"      
+            use: ["style-loader",
+                "css-loader",
+                "sass-loader"
             ]
-        }, 
-        // {
-        //     test: /\.(jpg|jpeg|png|gif|mp3|svg)$/,
-        //     loaders: ['file-loader']
-        // }
-    ]
+        },
+            {
+                test: /\.(jpg|jpeg|png|gif|mp3|svg)$/,
+                loaders: ['file-loader']
+            }
+        ]
     },
     plugins: [new HtmlWebpackPlugin({
         template: path.join(__dirname, 'src', 'index.html')
