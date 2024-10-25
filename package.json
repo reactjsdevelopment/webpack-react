@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "webpack-build": "babel-node ./node_modules/webpack/bin/webpack",
-    "start": "babel-node ./node_modules/webpack-dev-server/bin/webpack-dev-server --open"
+    "start": "babel-node ./node_modules/webpack-dev-server/bin/webpack-dev-server --open",
+    "build": "babel-node ./node_modules/webpack/bin/webpack"
   },
   "keywords": [],
   "author": "",
