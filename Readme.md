@@ -26,6 +26,9 @@ Webpack will automatically take the src/index.js file, compile it, and output it
 >npm install
 >npm run start
 >npm run webpack-build
+    "webpack-build": "babel-node ./node_modules/webpack/bin/webpack",
+    "start": "babel-node ./node_modules/webpack-dev-server/bin/webpack-dev-server --open",
+    "build": "babel-node ./node_modules/webpack/bin/webpack"
 
 ### Packages used
 >npm install -g babel-cli  // To run babel-node

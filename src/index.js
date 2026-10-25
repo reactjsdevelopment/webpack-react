@@ -1,10 +1,9 @@
 (function () {  console.log("hello world");}());
 
 
-import ReactDOM from "react-dom";
-import "index.scss";
-
 import React, { useState, Component } from 'react';
+import { createRoot } from 'react-dom/client';
+import "index.scss";
 
 
 
@@ -72,6 +71,8 @@ let HelloWorld = () => {
     console.log("hey");
     return <h1>Hello there World!</h1>}; 
 
-ReactDOM.render(  <ParentComponent/>,  document.getElementById("root"));
+const container = document.getElementById("root");
+const root = createRoot(container);
+root.render(<ParentComponent />);
 
 
